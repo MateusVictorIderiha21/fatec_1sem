@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 14px;
+    font-size-adjust: 1;
+}
+
+.conteudo, .objetivosPag, .personagensBando, .chamada {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body > section {
+    clear: both;
+}
+
+.topo {
+    height: 181px;
+    background: url(../images/topo.jpg) no-repeat center;
+    margin-bottom: 30px;
+}
+
+.topo .menu, .rodape {
+    background-color: hsl(202, 100%, 59%);
+}
+.topo .menu {
+    border: 1px solid hsl(0, 0%, 0%);
+    border-width: 1px 0;
+    padding: 5px 0;
+    position: relative;
+    top: 181px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.sumario {
+    width: 224px;
+    float: left;
+    position: fixed;
+}
+.sumario h2 {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    font-family: arial, verdana, sans-serif ;
+}
+
+.lendario {
+    float: left;
+    clear: left;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-family: arial, verdana, sans-serif ;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(347, 100%, 45%);
+}
+
+a:hover {
+    color: hsl(0, 0%, 0%);
+    font-size: 1.05em;
+}
+
+.topo .menu a {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.topo .menu a:hover {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.22em;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 25px;
+    height: 30px;
+}
+
+.topo, .rodape {
+    text-align: center;
+}
+
+.topo .logo {
+    font: bold 'times new roman' 'serif';
+    text-align: center;
+    float: left;
+}
+
+.objetivosPag p {
+    float: left;    
+    width: 63%;
+}
+
+.objetivosPag img {
+    max-height: 293px;
+    max-width: 27%;
+    border: 1px solid #000;
+}
+
+.chamada img {
+    height: 200px;
+}
+
+.rodape {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    padding: 10px 0;
+    margin-top: 30px;
+    clear: both;
+    /*position: absolute;*/
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape small {
+    font: 0.1em;
+}
