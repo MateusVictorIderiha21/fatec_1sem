@@ -13,15 +13,26 @@ html, body {
 html {
     font-size: 14px;
     font-size-adjust: 1;
+    overflow:hidden;
 }
 
-.conteudo, .objetivosPag, .personagensBando, .chamada {
-    width: 90%;
-    margin: 0 auto;
+body {
+    overflow-y:scroll;
+    
+}
+
+.conteudo, .chamada {
+    width: 80%;
+    margin: 0 10%;
 }
 
 body > section {
     clear: both;
+    background-color: #FFF;
+}
+
+body > section:nth-child(2n) {
+    background-color: hsla(202, 100%, 40%, 0.1);
 }
 
 .topo {
@@ -31,7 +42,7 @@ body > section {
 }
 
 .topo .menu, .rodape {
-    background-color: hsl(202, 100%, 59%);
+    background-image: linear-gradient(hsl(202, 100%, 40%),hsl(202, 100%, 24%));
 }
 .topo .menu {
     border: 1px solid hsl(0, 0%, 0%);
@@ -71,9 +82,15 @@ p {
     margin-bottom: 10px;
 }
 
-.subtitulo {
+.titulo, .subtitulo {
     font-family: arial, verdana, sans-serif ;
     font-weight: 600;
+}
+.titulo {
+    font-size: 1.5em;
+}
+.subtitulo {
+    font-size: 1.2em;
 }
 
 a {
@@ -88,14 +105,14 @@ a:hover {
 
 .topo .menu a {
     text-decoration: none;
-    color: hsl(0, 0%, 0%);
+    color: hsl(100, 100%, 100%);
     font-weight: 500;
     font-size: 1.2em;
     margin-right: 25px;
 }
 
 .topo .menu a:hover {
-    color: hsl(0, 0%, 100%);
+    color: hsl(50, 100%, 50%);
     font-size: 1.22em;
 }
 
@@ -103,6 +120,10 @@ a:hover {
     display: inline;
     margin-left: 25px;
     height: 30px;
+}
+
+.mascara {
+    background-color: hsl(202, 100%, 40%);
 }
 
 .topo, .rodape {
@@ -115,19 +136,91 @@ a:hover {
     float: left;
 }
 
-.objetivosPag p {
-    float: left;    
-    width: 63%;
+.objetivosPag div {
+    float: right;    
+    max-width: 37%;
+    max-width: calc(33vw - (100vw - 100%));
+    text-align: center;
+    padding: 0 2vw;
 }
 
 .objetivosPag img {
     max-height: 293px;
-    max-width: 27%;
-    border: 1px solid #000;
+    width: 63%;
+    width: calc(63vw - (100vw - 100%));
 }
 
-.chamada img {
+.meio {
+    position: relative;
+    top: -50%;
+    transform: translateY(50%); 
+}
+
+.chamada div, .chamada img {
+    float: left;
+}
+.chamada div {
+    max-width: calc(100% - 150px);
+    padding-top: 20px;
+}
+.chamada {
     height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.chamada img {
+    max-width: 75px;
+    height: 200px;
+}
+
+.novidadesRecentes {
+    padding: 20px 10%;
+    padding: 20px 10vw;
+    float: left;
+}
+.novidadeRecent {
+    height: 199px;
+    float: left;
+    width: 48%;
+    /*width: calc(39.5vw - (100vw - 100%));*/
+}
+.novidadesRecentes .novidadeRecent:first-child {
+    margin-right: 2%;
+    margin-right: 1vw;
+}
+
+.novidadeRecent img {
+    height: 199px;
+    height: 15.5vw;
+    max-width: 199px;
+    /*max-width: calc(15.5vw - (100vw - 100%));*/
+    float: left;
+}
+.novidadeRecent div {
+    float: left;
+    width: calc(100% - 219px);
+    /*width: calc(82vw - (100vw - 100%));*/
+    padding: 10px;
+}
+
+.personagensBando {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.personagensBando div {
+    margin: 0 auto;
+    float: left;
+}
+.personagensBando figure {
+    float: left;
+    padding: 20px 5px 0 0;
+}
+
+.personagensBando figure, .personagensBando figure img {
+    max-width: 115px;
+    height: 181px;
+    text-align: center;
 }
 
 .rodape {
