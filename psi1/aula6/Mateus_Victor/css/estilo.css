@@ -55,8 +55,8 @@ body > section:nth-child(2n) {
     height: 20px;
 }
 
-.topo .menu  ul {
-    width: 1000px;
+.topo > .menu > ul {
+    width: 700px;
     margin: 0 auto;
 }
 
@@ -72,7 +72,7 @@ body > section:nth-child(2n) {
     font-size: 1.22em;
 }
 
-.menu ul li {
+.menu > ul > li {
     display: block;
     width: 100px;
     float: left;
@@ -82,24 +82,33 @@ body > section:nth-child(2n) {
     width: 200px;
 }
 
-.drop .menuDrop {
+.menu .drop > .menuDrop {
     display: none;
     float: left;
+    z-index: 99;
+    width: auto;
 }
 
 .drop .menuDrop li {
     display: block;
-    position: relative;
-    top: 10px;
     clear: left;
     float: left;
 }
 
 .drop:hover > .menuDrop {
     display: block;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(202, 100%, 24%);
     position: absolute;
-/*    top: 0;
-    left: 15px; */
+    top: 30px;
+    padding: 5px 10px;
+    border: solid #000;
+    border-width: 0 1px 1px 1px;
+}
+
+.drop:hover > .menuDrop li { 
+    color: hsl(0, 0%, 0%);
+    text-align: center;
 }
 
 ul li {
