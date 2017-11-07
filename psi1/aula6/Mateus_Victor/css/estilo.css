@@ -202,18 +202,18 @@ a:hover {
     float: left;
 }
 
-.objetivosPag div {
+.objetivosPag figcaption {
     float: right;    
-    max-width: 37%;
-    max-width: calc(33vw - (100vw - 100%));
+    max-width: 33%;
     text-align: center;
-    padding: 0 2vw;
+    padding: 30px 2% 0 2%;
 }
 
 .objetivosPag img {
     max-height: 293px;
     width: 63%;
-    width: calc(63vw - (100vw - 100%));
+    opacity: 0.5;
+    clear: both;
 }
 
 .meio {
@@ -230,42 +230,37 @@ a:hover {
     padding-top: 20px;
 }
 .chamada {
-    height: 200px;
+    min-height: 200px;
     overflow: hidden;
     text-overflow: ellipsis; 
 }
 .chamada img {
     max-width: 75px;
-    height: 200px;
+    min-height: 200px;
 }
 
 .novidadesRecentes {
     padding: 20px 10%;
-    padding: 20px 10vw;
     float: left;
 }
 .novidadeRecent {
-    height: 199px;
+    min-height: 199px;
     float: left;
     width: 48%;
-    /*width: calc(39.5vw - (100vw - 100%));*/
 }
 .novidadesRecentes .novidadeRecent:first-child {
     margin-right: 2%;
-    margin-right: 1vw;
 }
 
 .novidadeRecent img {
-    height: 199px;
-    height: 15.5vw;
     max-width: 199px;
-    /*max-width: calc(15.5vw - (100vw - 100%));*/
+    min-width: 150px;
+    height: auto;
     float: left;
 }
-.novidadeRecent div {
+.novidadeRecent .descricaoNovidade {
     float: left;
     width: calc(100% - 219px);
-    /*width: calc(82vw - (100vw - 100%));*/
     padding: 10px;
 }
 
@@ -297,7 +292,6 @@ a:hover {
     padding: 10px 0;
     margin-top: 30px;
     clear: both;
-    /*position: absolute;*/
     position: relative;
     bottom: 0;
     width: 100%;
@@ -307,11 +301,23 @@ a:hover {
     font: 0.1em;
 }
 
-.todoConteudo {
-    
+@media screen and (max-width: 1280px) {
+    .novidadesRecentes {
+        padding: 20px 5%;
+    }
 }
-
-.objetivosPag img {
-    opacity: 0.5;
-    clear: both;
+@media screen and (max-width: 1024px) {
+    .novidadesRecentes {
+        padding: 20px 10%;
+        float: none;
+    }
+    .novidadeRecent {
+        min-height: 199px;
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .novidadeRecent:last-child {
+        margin-bottom: 0px;
+    }
 }
