@@ -12,13 +12,13 @@ html, body {
 
 html {
     font-size: 14px;
-    font-size-adjust: 1;
+    font-size: 100%;
+    -web-kit-font-size-adjust: 100%;
     overflow:hidden;
 }
 
 body {
     overflow-y:scroll;
-    
 }
 
 .conteudo, .chamada {
@@ -31,7 +31,7 @@ body > section {
     background-color: #FFF;
 }
 
-body > section:nth-child(2n) {
+body.home > section:nth-child(2n) {
     background-color: hsla(202, 100%, 40%, 0.1);
 }
 
@@ -131,10 +131,6 @@ body > section:nth-child(2n) {
     padding: 2.5px 0;
 }
 
-.drop:hover > .menuDrop > li:hover { 
-    /*background-color: hsl(0, 0%, 0%);*/
-}
-
 ul li {
     list-style-type: none;
 }
@@ -168,13 +164,14 @@ p {
 .titulo, .subtitulo {
     font-family: arial, verdana, sans-serif ;
     font-weight: 600;
-    color: #B5001D;
-    text-shadow: 0.5px 0.5px 0 #000;
 }
 .titulo {
+    color: #B5001D;
+    text-shadow: 0.5px 0.5px 0 #000;
     font-size: 1.5em;
 }
 .subtitulo {
+    color: #000;
     font-size: 1.2em;
 }
 
@@ -185,7 +182,6 @@ a {
 
 a:hover {
     color: hsl(0, 0%, 0%);
-    font-size: 1.05em;
 }
 
 .mascara {
@@ -239,7 +235,7 @@ a:hover {
     min-height: 200px;
 }
 
-.novidadesRecentes {
+.home .novidadesRecentes {
     padding: 20px 10%;
     float: left;
 }
@@ -247,9 +243,11 @@ a:hover {
     min-height: 199px;
     float: left;
     width: 48%;
+    background-color: hsla(202, 100%, 40%, 0.1);
+    margin: 0 10px 10px 0;
 }
-.novidadesRecentes .novidadeRecent:first-child {
-    margin-right: 2%;
+.novidadesRecentes .novidadeRecent:nth-child(2n) {
+    margin-right: 0;
 }
 
 .novidadeRecent img {
@@ -264,14 +262,20 @@ a:hover {
     padding: 10px;
 }
 
+.novidades .novidadesRecentes {
+    width: 80%;
+    margin: 0 1% 0 2.5%;
+    float: left;
+}
+
 .personagensBando {
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
 }
-.personagensBando div {
+.personagensBando .group-imagens {
     margin: 0 auto;
-    float: left;
+    width: 1280px;
 }
 .personagensBando figure {
     float: left;
@@ -283,6 +287,39 @@ a:hover {
     height: 181px;
     text-align: center;
 }
+
+.novidadesLista {
+    width: 14%;
+    margin-right: 2.5%;
+    float: left;
+}
+
+.tabela {
+    border: 1px solid #000;
+    border-spacing: 0;
+}
+#tabela-grupo-pers {
+    width: 1299px;
+}
+.tabela tr th, .tabela tr td {
+    border: 0.25px solid #333;
+    padding: 5px 10px;
+}
+.tabela thead tr, .tabela tfoot tr {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(100, 100%, 100%);
+    font-size: 1.1em;
+}
+.tabela thead tr th, .tabela tfoot tr th {
+    background: -webkit-linear-gradient(#BF9F00, #615000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tabela tbody tr:nth-child(2n) {
+    background-color: hsla(202, 100%, 40%, 0.1);
+    text-shadow: 0 0 8px #fff;
+}
+
 
 .rodape {
     text-align: center;
@@ -299,6 +336,14 @@ a:hover {
 
 .rodape small {
     font: 0.1em;
+}
+
+.margin30 {
+    margin-top: 30px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 @media screen and (max-width: 1280px) {
@@ -319,5 +364,8 @@ a:hover {
     }
     .novidadeRecent:last-child {
         margin-bottom: 0px;
+    }
+    .personagensBando .group-imagens {
+        width: 1024px;
     }
 }
