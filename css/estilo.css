@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 14px;
+    font-size: 100%;
+    -web-kit-font-size-adjust: 100%;
+    overflow:hidden;
+}
+
+body {
+    overflow-y:scroll;
+}
+
+.conteudo, .chamada {
+    width: 80%;
+    margin: 0 10%;
+}
+
+body > section {
+    clear: both;
+    background-color: #FFF;
+}
+
+body.home > section:nth-child(2n) {
+    background-color: hsla(202, 100%, 40%, 0.1);
+}
+
+.topo {
+    height: 181px;
+    background: url(../images/topo.jpg) no-repeat center;
+    margin-bottom: 30px;
+}
+
+.topo .menu {
+    background-image: linear-gradient(hsl(202, 100%, 40%),hsl(202, 100%, 24%));
+    z-index: 99;
+}
+.topo .menu {
+    border: 1px solid hsl(0, 0%, 0%);
+    border-width: 1px 0;
+    padding: 0;
+    position: relative;
+    top: 181px;
+    float: left;
+    width: 100%;
+}
+
+.topo > .menu > ul {
+    width: calc(750px + 4px);
+    margin: 0 auto;
+    /* height: 32px; */
+}
+
+.topo .menu a {
+    text-decoration: none;
+    color: hsl(0, 8%, 89%);
+    font-weight: 500;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 0px #000;
+}
+
+.topo > .menu > ul > li > a {
+    display: block;
+    border-left: solid 1px hsl(0, 0%, 100%);
+}
+
+.topo > .menu > ul > li:first-child > a {
+    border-left: none;
+}
+
+.menu > ul > li {
+    padding: 5px 0;
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+.topo .menu a:hover {
+    color: hsl(100, 100%, 100%);
+    text-shadow: none;
+}
+
+.topo > .menu > ul > li:hover {
+    background-color: hsl(202, 100%, 24%);
+    border-left:  solid 1px hsl(0, 0%, 0%);
+    border-right:  solid 1px hsl(0, 0%, 0%);
+    width: calc(150px - 1px);
+}
+
+.topo > .menu li:hover > a, .topo > .menu li:hover + li > a  {
+    border-left: none;
+}
+
+.menu .drop > .menuDrop {
+    display: none;
+    float: left;
+    z-index: 99;
+    width: auto;
+}
+
+.drop .menuDrop li {
+    display: block;
+    clear: left;
+    float: left;
+}
+
+.drop:hover > .menuDrop {
+    display: block;
+    color: hsl(0, 0%, 0%);
+    background-color: hsl(202, 100%, 24%);
+    position: absolute;
+    top: 30px;
+    border-width: 0 1px 1px 1px;
+    width: 150px;
+    box-shadow: 1px 1px 1px #000;
+}
+
+.drop:hover > .menuDrop > li {
+    text-align: center;
+    width: 100%;
+    padding: 2.5px 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.sumario {
+    width: 224px;
+    float: left;
+    position: fixed;
+}
+.sumario h2 {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    font-family: arial, verdana, sans-serif ;
+}
+
+.lendario {
+    float: left;
+    clear: left;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.titulo, .subtitulo {
+    font-family: arial, verdana, sans-serif ;
+    font-weight: 600;
+}
+.titulo {
+    color: #B5001D;
+    text-shadow: 0.5px 0.5px 0 #000;
+    font-size: 1.5em;
+}
+.subtitulo {
+    color: #000;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(347, 100%, 45%);
+}
+
+a:hover {
+    color: hsl(0, 0%, 0%);
+}
+
+.mascara {
+    background-color: hsl(202, 100%, 40%);
+}
+
+.topo, .rodape {
+    text-align: center;
+}
+
+.topo .logo {
+    font: bold 'times new roman' 'serif';
+    text-align: center;
+    float: left;
+}
+
+.objetivosPag figcaption {
+    float: right;    
+    max-width: 33%;
+    text-align: center;
+    padding: 30px 2% 0 2%;
+}
+
+.objetivosPag img {
+    max-height: 293px;
+    width: 63%;
+    opacity: 0.5;
+    clear: both;
+}
+
+.meio {
+    position: relative;
+    top: -50%;
+    transform: translateY(50%); 
+}
+
+.chamada div, .chamada img {
+    float: left;
+}
+.chamada div {
+    max-width: calc(100% - 150px);
+    padding-top: 20px;
+}
+.chamada {
+    min-height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.chamada img {
+    max-width: 75px;
+    min-height: 200px;
+}
+
+.home .novidadesRecentes {
+    padding: 20px 10%;
+    float: left;
+}
+.novidadeRecent {
+    min-height: 199px;
+    float: left;
+    width: 48%;
+    background-color: hsl(100, 100%, 100%);
+    margin: 0 10px 10px 0;
+    box-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.25);
+}
+.novidadesRecentes figure.novidadeRecent:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+.novidadeRecent img {
+    max-width: 199px;
+    min-width: 150px;
+    height: auto;
+    float: left;
+}
+.novidadeRecent .descricaoNovidade {
+    float: left;
+    width: calc(100% - 219px);
+    padding: 10px;
+}
+.novidadeRecent .btnLeia {
+    color: #FFD300;
+    text-shadow: 0.5px 0.5px 0px #635302;
+    transition: color 0.6s, text-shadow 0.6s;
+    font-weight: 600;
+    float: right;
+}
+.novidadeRecent .btnLeia:hover {
+    color: hsl(0, 0%, 0%);
+    text-shadow: none;
+}
+
+.novidades .novidadesRecentes {
+    width: 80%;
+    margin: 0 1% 0 2.5%;
+    float: left;
+}
+
+.personagensBando {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.personagensBando .group-imagens {
+    margin: 0 auto;
+    width: 1280px;
+}
+.personagensBando figure {
+    float: left;
+    padding: 20px 5px 0 0;
+}
+
+.personagensBando figure, .personagensBando figure img {
+    max-width: 115px;
+    height: 181px;
+    text-align: center;
+}
+
+.novidadesLista {
+    width: 14%;
+    margin-right: 2.5%;
+    float: left;
+}
+
+.tabela {
+    border: 1px solid #000;
+    border-spacing: 0;
+}
+#tabela-grupo-pers {
+    width: 1299px;
+    margin: 0 auto;
+}
+.tabela tr th, .tabela tr td {
+    border: 1px solid #c3c3c3;
+    padding: 5px 10px;
+}
+.tabela thead tr, .tabela tfoot tr {
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(100, 100%, 100%);
+    font-size: 1.1em;
+}
+.tabela thead tr th, .tabela tfoot tr th {
+    background: -webkit-linear-gradient(#BF9F00, #615000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tabela tbody tr:nth-of-type(2n) {
+    background-color: hsla(202, 100%, 40%, 0.1);
+    text-shadow: 0 0 8px #fff;
+}
+.tabela tbody tr:hover {
+    background-color: hsla(50, 100%, 50%, 0.24);
+}
+
+.tabela#tabela-personagem {
+    width: 522px;
+    float: left;
+}
+.historia-pers {
+    width: calc(100% - 522px - 10%);
+    float: left;
+}
+
+
+.rodape {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(202, 100%, 24%);
+    border-top: solid 1px hsl(0, 0%, 0%);
+    padding: 10px 0;
+    margin-top: 30px;
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.rodape small {
+    font: 0.1em;
+}
+
+.margin30 {
+    margin-top: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        font-size: 0.9em;
+    }
+    .novidadesRecentes {
+        padding: 20px 5%;
+    }
+    .novidadeRecent {
+        min-height: 150px;
+        height: 150px;
+    }
+    .novidadeRecent .descricaoNovidade {
+        max-height: 150px;
+    }
+    .novidadeRecent .descricaoNovidade p {
+        text-overflow: ellipsis; 
+        height: calc(150px - 0.9em - 1.2em - 40px);
+        overflow: hidden;
+    }
+    
+    .tabela#tabela-grupo-pers {
+        width: 900px;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .novidadesRecentes {
+            padding: 20px 10%;
+            float: none;
+        }
+        .novidadeRecent {
+            float: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .novidadeRecent:last-child {
+            margin-bottom: 0px;
+        }
+        .personagensBando .group-imagens {
+            width: 1024px;
+        }
+    }
+}
