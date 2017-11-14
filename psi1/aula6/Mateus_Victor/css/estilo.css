@@ -168,7 +168,8 @@ p {
 .titulo {
     color: #B5001D;
     text-shadow: 0.5px 0.5px 0 #000;
-    font-size: 1.5em;
+    text-transform: uppercase;
+    font-size: 1.4em;
 }
 .subtitulo {
     color: #000;
@@ -193,7 +194,7 @@ a:hover {
 }
 
 .topo .logo {
-    font: bold 'times new roman' 'serif';
+    font: bold 'times new roman', 'serif';
     text-align: center;
     float: left;
 }
@@ -300,7 +301,7 @@ a:hover {
     text-align: center;
 }
 
-.novidadesLista {
+.sidebar {
     width: 14%;
     margin-right: 2.5%;
     float: left;
@@ -345,6 +346,10 @@ a:hover {
     float: left;
 }
 
+.resenhas {
+    width: 80%;
+    float: left;
+}
 
 .rodape {
     text-align: center;
@@ -395,21 +400,22 @@ a:hover {
         width: 900px;
     }
     
-    @media screen and (max-width: 1024px) {
-        .novidadesRecentes {
-            padding: 20px 10%;
-            float: none;
-        }
-        .novidadeRecent {
-            float: none;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .novidadeRecent:last-child {
-            margin-bottom: 0px;
-        }
-        .personagensBando .group-imagens {
-            width: 1024px;
-        }
+}
+
+@media screen and (max-width: 1024px) {
+    .novidadesRecentes {
+        padding: 20px 10%;
+        float: none;
+    }
+    .novidadeRecent {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .novidadeRecent:last-child {
+        margin-bottom: 0px;
+    }
+    .personagensBando .group-imagens {
+        width: 1024px;
     }
 }
