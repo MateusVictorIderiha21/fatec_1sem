@@ -1,0 +1,40 @@
+@charset = "utf-8";
+
+@import pokemon/Pokemon Solid.ttf;
+
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-size-adjust: 1;
+}
+
+.conteudo, .listaJogos {
+	margin: 15%;
+}
+
+.menu ul li {
+	display: inline;
+	margin-left: 25px;
+}
+
+.topo, .rodape {
+	text-align: center;
+}
+
+.topo {
+	/*background-image: ;*/
+}
+
+.rodape {
+	text-align: center;
+	background-color: #FF0000;
+	color: #FFF;
+	padding: 10px 0;
+}
+
+.rodape small {
+	font: -0.1em;
+}
